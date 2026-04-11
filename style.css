@@ -2,6 +2,18 @@ html {
     scroll-behavior: smooth;
 }
 
+.active-switch {
+  background-color: #B0FD07;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 .unbounded-extra-light {
     font-family: "Unbounded", sans-serif;
     font-optical-sizing: auto;

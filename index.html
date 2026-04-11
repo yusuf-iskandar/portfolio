@@ -5,7 +5,7 @@
     <title>Front-end & UI/UX Designer - Yusuf Iskandar</title>
     <meta charset="UTF-8">
     <meta name="description" content="Landing Page Portfolio">
-    <meta name="keywords" content="UI/UX Designer, Web Designer, Frontend Development, WordPress Development">
+    <meta name="keywords" content="UI/UX Design, Web Design, Frontend Development, WordPress Development">
     <meta name="author" content="Yusuf Iskandar">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./favicon-white-yusufiskan_.png">
@@ -22,9 +22,27 @@
 <!-- 🔥 HEADER -->
 <header class="fixed top-0 left-0 w-full z-50 px-6 md:px-16 py-4 flex justify-between items-center">
   <img class="w-20" src="logo_y.png" alt="Yusuf Iskandar">
-  <a href="#contact-me" class="text-sm font-medium hover:underline unbounded-reguler">
-    Contact me
-  </a>
+  <div class="flex items-center gap-4">
+    <!-- CONTACT -->
+    <a href="#contact-me" 
+       data-id="Mari Diskusi"
+       data-en="Contact me"
+       class="text-sm font-medium hover:underline unbounded-reguler">
+      Contact me
+    </a>
+
+    <!-- 🌐 LANGUAGE SWITCH -->
+    <div class="flex items-center gap-2">
+      <span id="labelID" class="text-xs font-medium">ID</span>
+
+      <div id="langSwitch" class="w-12 h-6 bg-gray-300 rounded-full p-1 cursor-pointer flex items-center transition">
+        <div id="switchCircle" class="w-4 h-4 bg-white rounded-full shadow-md transform transition"></div>
+      </div>
+
+      <span id="labelEN" class="text-xs font-medium">EN</span>
+    </div>
+
+  </div>
 </header>
 
 <!-- 🔥 BACKGROUND -->
@@ -43,36 +61,36 @@
   <div class="hidden md:flex fixed right-12 top-1/2 -translate-y-1/2 z-50 flex-col gap-6 items-end">
 
     <a href="#home" class="nav-item flex items-center gap-3">
-      <span class="text-sm text-gray-500 unbounded-reguler">Introduction</span>
+      <span class="text-sm text-gray-500 unbounded-reguler" data-id="Perkenalan Diri" data-en="Introduction">Introduction</span>
       <div class="w-3 h-3 rounded-full bg-gray-400"></div>
     </a>
 
-    <a href="#works" class="nav-item flex items-center gap-3">
-      <span class="text-sm text-gray-500 unbounded-reguler">Works</span>
+    <a href="#portfolio" class="nav-item flex items-center gap-3">
+      <span class="text-sm text-gray-500 unbounded-reguler" data-id="Portofolio" data-en="Portfolio">Portfolio</span>
       <div class="w-3 h-3 rounded-full bg-gray-400"></div>
     </a>
 
     <a href="#about-me" class="nav-item flex items-center gap-3">
-      <span class="text-sm text-gray-500 unbounded-reguler">About me</span>
+      <span class="text-sm text-gray-500 unbounded-reguler" data-id="Tentang Saya" data-en="About me">About me</span>
       <div class="w-3 h-3 rounded-full bg-gray-400"></div>
     </a>
 
     <a href="#skills-tools" class="nav-item flex items-center gap-3">
-      <span class="text-sm text-gray-500 unbounded-reguler">Skills & Tools</span>
+      <span class="text-sm text-gray-500 unbounded-reguler" data-id="Keahlian & Teknologi" data-en="Skills & Tools">Skills & Tools</span>
       <div class="w-3 h-3 rounded-full bg-gray-400"></div>
     </a>
     <a href="#experiences" class="nav-item flex items-center gap-3">
-      <span class="text-sm text-gray-500 unbounded-reguler">Experiences</span>
+      <span class="text-sm text-gray-500 unbounded-reguler" data-id="Pengalaman Kerja" data-en="Experiences">Experiences</span>
       <div class="w-3 h-3 rounded-full bg-gray-400"></div>
     </a>
 
-    <a href="#services" class="nav-item flex items-center gap-3">
-      <span class="text-sm text-gray-500 unbounded-reguler">Services</span>
+    <!-- <a href="#services" class="nav-item flex items-center gap-3">
+      <span class="text-sm text-gray-500 unbounded-reguler" data-id="Solusi yang Saya Tawarkan" data-en="Services">Services</span>
       <div class="w-3 h-3 rounded-full bg-gray-400"></div>
-    </a>
+    </a> -->
 
     <a href="#contact-me" class="nav-item flex items-center gap-3">
-      <span class="text-sm text-gray-500 unbounded-reguler">Contact me</span>
+      <span class="text-sm text-gray-500 unbounded-reguler" data-id="Mari Diskusi" data-en="Contact me">Contact me</span>
       <div class="w-3 h-3 rounded-full bg-gray-400"></div>
     </a>
 
@@ -80,23 +98,29 @@
 
   <!-- 🔥 MOBILE NAV -->
   <div class="md:hidden fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-[90%] overflow-x-auto">
-    <div class="flex gap-4 bg-white/80 backdrop-blur px-4 py-2 rounded-full shadow text-sm whitespace-nowrap unbounded-reguler">
-        <a href="#home" class="shrink-0">Introduction</a>
-        <a href="#works" class="shrink-0">Works</a>
-        <a href="#about-me" class="shrink-0">About me</a>
-        <a href="#skills-tools" class="shrink-0">Skills & Tools</a>
-        <a href="#experiences" class="shrink-0">Experiences</a>
-        <a href="#services" class="shrink-0">Services</a>
-        <a href="#contact-me" class="shrink-0">Contact me</a>
+    <div class="flex gap-4 bg-white/80 backdrop-blur px-4 py-2 text-sm whitespace-nowrap unbounded-reguler">
+        <a href="#home" class="shrink-0" data-id="Perkenalan Diri" data-en="Introduction">Introduction</a>
+        <a href="#portfolio" class="shrink-0" data-id="Portofolio" data-en="Portfolio">Portfolio</a>
+        <a href="#about-me" class="shrink-0" data-id="Tentang Saya" data-en="About me">About me</a>
+        <a href="#skills-tools" class="shrink-0" data-id="Keahlian & Teknologi" data-en="Skills & Tools">Skills & Tools</a>
+        <a href="#experiences" class="shrink-0" data-id="Pengalaman Kerja" data-en="Experiences">Experiences</a>
+        <!-- <a href="#services" class="shrink-0" data-id="Solusi yang Saya Tawarkan" data-en="Services">Services</a> -->
+        <a href="#contact-me" class="shrink-0" data-id="Mari Diskusi" data-en="Contact me">Contact me</a>
     </div>
    </div>
 
   <!-- 🔥 SECTION -->
   <section id="home" class="snap-start h-screen flex items-center px-8 md:px-20">
     <div class="max-w-xl bg-white/80 p-0 md:p-10 rounded-xl">
-      <h1 class="text-3xl md:text-5xl unbounded-bold font-bold mb-1">Hi, I’m Yusuf</h1>
+      <h1 class="text-3xl md:text-5xl unbounded-bold font-bold mb-1"
+      data-id="Hai, saya Yusuf"
+      data-en="Hi, I’m Yusuf">
+      </h1>
       <p class="text-[#808080] text-xl md:text-2xl unbounded-reguler mb-4">Front-end & UI/UX Designer</p>
-      <p class="text-[#808080] text-sm unbounded-light tracking-wider mb-5">I design clean, modern, and user-friendly websites that help businesses grow and stand out.</p>
+      <p class="text-[#808080] text-sm unbounded-light tracking-wider mb-5"
+      data-id="Saya membantu bisnis berkembang melalui website yang bersih, modern, dan mudah digunakan."
+      data-en="I design clean, modern, and user-friendly websites that help businesses grow and stand out.">
+      </p>
 
         <div class="flex gap-5 unbounded-semibold underline">
             <a href="https://www.linkedin.com/in/yusufiskandarr/" target="_blank" class="hover:text-[#B0FD07]">LinkedIn</a>
@@ -105,29 +129,130 @@
     </div>
   </section>
 
-  <section id="works" class="snap-start h-screen flex items-center px-8 md:px-20">
-    <div class="max-w-xl bg-white/80 p-0 md:p-10 rounded-xl">
-      <h2 class="text-3xl md:text-5xl unbounded-bold font-bold mb-4">Works</h2>
+  <section id="portfolio" class="snap-start h-screen flex items-center px-8 md:px-20">
+    <div class="max-w-5xl bg-white/80 p-0 md:p-10 rounded-xl">
+      <div class="flex gap-5 items-center">
+        <h2 class="text-3xl md:text-5xl unbounded-bold font-bold mb-4"
+        data-id="Portofolio"
+        data-en="Portfolio">
+        </h2>
+        <div>
+          <a href="Portfolio_Yusuf-Iskandar-low.pdf" target="_blank" class="unbounded-bold text-xs md:text-sm bg-[#B0FD07] hover:bg-[#808080] hover:text-white py-1 px-4 rounded-full"
+          data-en="Other"
+          data-id="Lainnya">
+          </a>
+        </div>
+      </div>
+      <div class="mb-3">
+        <p class="unbounded-reguler text-[#808080] text-sm tracking-wider"
+        data-id="Ingin melihat lebih banyak karya saya? Kunjungi LinkedIn saya. Klik <a href='https://id.linkedin.com/in/yusufiskandarr' target='_blank' class='underline unbounded-bold text-[#000000] hover:text-[#B0FD07]'>disini</a>"
+        data-en="Want to see more of my work? Visit my LinkedIn. Click <a href='https://id.linkedin.com/in/yusufiskandarr' target='_blank' class='underline unbounded-bold text-[#000000] hover:text-[#B0FD07]'>here</a>">
+        </p>
+      </div>
+      <div class="max-w-xs md:max-w-5xl mx-auto">
+
+          <!-- SLIDER -->
+          <div class="relative overflow-hidden">
+
+            <!-- TRACK -->
+            <div id="slider" class="flex transition-transform duration-500 ease-in-out">
+
+              <!-- SLIDE 1 -->
+              <div class="min-w-full">
+                <img src="thumbnail-bi.jpg" class="w-full h-[200px] sm:h-[200px] md:h-[300px] object-cover object-top pointer-events-none">
+                <div class="py-2 px-2">
+                  <h3 class="text-lg unbounded-semibold mb-2">
+                    Bank Indonesia - Jaga Ekonomi Tetap Tangguh, ini 5 Resep BI Hadapi Tantangan Global
+                  </h3>
+                  <p class="text-[#808080] text-xs unbounded-light tracking-wider mb-4"
+                  data-id="Mengimplementasikan desain ke dalam front-end website dengan slicing presisi, animasi transisi yang halus, dan tampilan responsif untuk pengalaman pengguna terbaik."
+                  data-en="Implementing designs into front-end websites with precise slicing, smooth transition animations, and responsive layouts to deliver the best user experience.">
+                  </p>
+                  <a href="https://vip.kompas.com/jaga-ekonomi-tetap-tangguh/" target="_blank" class="unbounded-bold text-xs md:text-sm bg-[#B0FD07] hover:bg-[#808080] hover:text-white py-1 px-4 rounded-full"
+                data-en="Project showcase"
+                data-id="Hasil proyek">
+                </a>
+                </div>
+              </div>
+
+              <!-- SLIDE 2 -->
+              <div class="min-w-full">
+                <img src="thumbnail-tanahpasundan.jpg" class="w-full h-[200px] sm:h-[200px] md:h-[300px] object-cover object-top pointer-events-none">
+                <div class="py-2 px-2">
+                  <h3 class="text-lg unbounded-semibold mb-2">
+                    Menanam Pohon, Memulihkan Ekologi, Memberdayakan Masyarakat
+                  </h3>
+                  <p class="text-[#808080] text-xs unbounded-light tracking-wider mb-4"
+                  data-id="Merealisasikan desain visual ke dalam front-end website melalui slicing yang akurat, animasi transisi yang mulus, serta optimalisasi responsif untuk pengalaman pengguna yang optimal."
+                  data-en="Transforming visual designs into front-end websites through precise slicing, smooth transition animations, and responsive optimization to deliver an optimal user experience.">
+                  </p>
+                  <a href="https://vip.kompas.com/menghijaukan-tanah-pasundan-demi-masa-depan/" target="_blank" class="unbounded-bold text-xs md:text-sm bg-[#B0FD07] hover:bg-[#808080] hover:text-white py-1 px-4 rounded-full"
+                data-en="Project showcase"
+                data-id="Hasil proyek">
+                </a>
+                </div>
+              </div>
+
+              <!-- SLIDE 3 -->
+              <div class="min-w-full">
+                <img src="thumbnail-mangrove.jpg" class="w-full h-[200px] sm:h-[200px] md:h-[300px] object-cover object-top pointer-events-none">
+                <div class="py-2 px-2">
+                  <h3 class="text-lg unbounded-semibold mb-2">
+                    Mangrove, Benteng Masa Depan Hadapi Perubahan Iklim
+                  </h3>
+                  <p class="text-[#808080] text-xs unbounded-light tracking-wider mb-4"
+                  data-id="Merealisasikan desain ke dalam front-end website melalui proses slicing presisi, implementasi transisi yang halus, serta pengoptimalan tampilan responsif untuk kualitas antarmuka yang maksimal."
+                  data-en="Converting designs into front-end websites with pixel-perfect slicing, seamless transitions, and responsive optimization to deliver high-quality user interfaces.">
+                  </p>
+                  <a href="https://vip.kompas.com/M4CR/" target="_blank" class="unbounded-bold text-xs md:text-sm bg-[#B0FD07] hover:bg-[#808080] hover:text-white py-1 px-4 rounded-full"
+                data-en="Project showcase"
+                data-id="Hasil proyek">
+                </a>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- NAV -->
+            <button id="prev" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white py-2 px-3 rounded-full shadow z-20 hidden md:block">
+              ←
+            </button>
+
+            <button id="next" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white py-2 px-3 rounded-full shadow z-30 hidden md:block">
+              →
+            </button>
+
+            <!-- DOTS -->
+            <div id="dots" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2"></div>
+
+          </div>
+      </div>
       
     </div>
   </section>
 
   <section id="about-me" class="snap-start h-screen flex items-center px-8 md:px-20">
     <div class="max-w-xl bg-white/80 p-0 md:p-10 rounded-xl">
-      <h2 class="text-3xl md:text-5xl unbounded-bold font-bold mb-4">About me</h2>
-      <p class="text-[#808080] text-sm unbounded-light tracking-wider mb-10">
-        I’m a Front-end & UI/UX Designer passionate about creating modern, clean, and intuitive digital experiences.<br><br>I focus on combining design and functionality to deliver websites that are not only visually appealing but also effective.
+      <h2 class="text-3xl md:text-5xl unbounded-bold font-bold mb-4"
+      data-id="Tentang Saya"
+      data-en="About me">
+      </h2>
+      <p class="text-[#808080] text-sm unbounded-light tracking-wider mb-10"
+      data-id="Saya adalah Front-End & UI/UX Designer yang berfokus pada pembuatan pengalaman digital yang modern, bersih, dan mudah digunakan.<br><br> Saya membantu bisnis menghadirkan website yang tidak hanya menarik secara visual, tetapi juga mampu meningkatkan efektivitas dan performa."
+      data-en="I’m a Front-end & UI/UX Designer passionate about creating modern, clean, and intuitive digital experiences.<br><br> I focus on combining design and functionality to deliver websites that are not only visually appealing but also effective.">
       </p>
 
-      <a href="RESUME_Yusuf_Iskandar.pdf" target="_blank" class="unbounded-bold bg-[#B0FD07] hover:bg-[#808080] hover:text-white py-4 px-8 rounded-full">Download CV</a>
-
+      <a href="CV_yusufiskandar.pdf" target="_blank" class="unbounded-bold bg-[#B0FD07] hover:bg-[#808080] hover:text-white py-4 px-8 rounded-full">Download CV</a>
 
     </div>
   </section>
 
   <section id="skills-tools" class="snap-start h-screen flex items-center px-8 md:px-20">
     <div class="max-w-xl bg-white/80 p-0 md:p-10 rounded-xl">
-      <h2 class="text-3xl md:text-5xl unbounded-bold font-bold mb-4">Skills & Tools</h2>
+      <h2 class="text-3xl md:text-5xl unbounded-bold font-bold mb-4"
+      data-id="Keahlian & Teknologi"
+      data-en="Skills & Tools">
+      </h2>
         <div class="mb-3">
             <p class="text-lg unbounded-reguler">Design</p>
             <p class="text-[#808080] text-xs unbounded-light tracking-wider">Figma, Adobe Photoshop, Adobe Illustrator, Adobe Indesign</p>
@@ -153,10 +278,16 @@
 
   <section id="experiences" class="snap-start h-screen flex items-center px-8 md:px-20">
     <div class="max-w-xl bg-white/80 p-0 md:p-10 rounded-xl">
-      <h2 class="text-3xl md:text-5xl unbounded-bold font-bold mb-4">My Experience</h2>
+      <h2 class="text-3xl md:text-5xl unbounded-bold font-bold mb-4"
+      data-id="Pengalaman Kerja"
+      data-en="My Experience">
+      </h2>
         <div class="mb-3">
             <p class="text-lg unbounded-reguler">Front-end Designer/Developer</p>
-            <p class="text-[#808080] text-xs unbounded-light tracking-wider">PT Uninet Bhaktinusa<br>(Group of Kompas Gramedia) • 2025 - Now</p>
+            <p class="text-[#808080] text-xs unbounded-light tracking-wider"
+            data-id="PT Uninet Bhaktinusa<br>(Group of Kompas Gramedia) • 2025 - Sekarang"
+            data-en="PT Uninet Bhaktinusa<br>(Group of Kompas Gramedia) • 2025 - Present">
+          </p>
         </div>
         <div class="mb-3">
             <p class="text-lg unbounded-reguler">UI/UX Designer</p>
@@ -181,31 +312,52 @@
     </div>
   </section>
 
-  <section id="services" class="snap-start h-screen flex items-center px-8 md:px-20">
+  <!-- <section id="services" class="snap-start h-screen flex items-center px-8 md:px-20">
     <div class="max-w-xl bg-white/90 p-0 md:p-10 rounded-xl w-full">
-      <h2 class="text-3xl md:text-5xl unbounded-bold font-bold mb-4">Services</h2>
+      <h2 class="text-3xl md:text-5xl unbounded-bold font-bold mb-4"
+      data-id="Solusi yang saya tawarkan"
+      data-en="Services">
+      </h2>
         <div class="mb-3">
             <p class="text-lg unbounded-reguler">UI/UX Design</p>
-            <p class="text-[#808080] text-sm unbounded-light tracking-wider">Creating intuitive and modern user interfaces</p>
+            <p class="text-[#808080] text-sm unbounded-light tracking-wider"
+            data-id="Merancang antarmuka pengguna yang intuitif dan modern untuk pengalaman yang lebih baik"
+            data-en="Creating intuitive and modern user interfaces">
+            </p>
         </div>
         <div class="mb-3">
             <p class="text-lg unbounded-reguler">Front-end Development</p>
-            <p class="text-[#808080] text-sm unbounded-light tracking-wider">Building responsive and fast websites</p>
+            <p class="text-[#808080] text-sm unbounded-light tracking-wider"
+            data-id="Mengembangkan website yang responsif dan memiliki performa cepat"
+            data-en="Building responsive and fast websites">
+            </p>
         </div>
         <div class="mb-3">
             <p class="text-lg unbounded-reguler">Website Redesign</p>
-            <p class="text-[#808080] text-sm unbounded-light tracking-wider">Improving outdated websites into modern experiences</p>
+            <p class="text-[#808080] text-sm unbounded-light tracking-wider"
+            data-id="Mengubah website lama menjadi pengalaman modern yang lebih menarik dan efektif"
+            data-en="Improving outdated websites into modern experiences">
+            </p>
         </div>
     </div>
-  </section>
+  </section> -->
 
   <section id="contact-me" class="snap-start h-screen flex items-center px-8 md:px-20">
     <div class="max-w-xl bg-white/80 p-0 md:p-10 rounded-xl">
-      <h2 class="text-3xl md:text-5xl unbounded-bold font-bold mb-4">Let’s work together</h2>
-      <p class="text-xl md:text-3xl unbounded-reguler">Have a project in mind?</p>
+      <h2 class="text-3xl md:text-5xl unbounded-bold font-bold mb-4"
+      data-id="Mari bekerja sama"
+      data-en="Let’s work together">
+      </h2>
+      <p class="text-xl md:text-3xl unbounded-reguler"
+      data-id="Punya proyek dalam pikiran?"
+      data-en="Have a project in mind?">
+      </p>
 
       <div class="mt-20">
-        <h3 class="text-2xl md:text-4xl unbounded-bold mb-5">Let’s talk!</h3>
+        <h3 class="text-2xl md:text-4xl unbounded-bold mb-5"
+        data-id="Yuk kita Diskusikan!"
+        data-en="Let’s talk!">
+        </h3>
         <div class="flex gap-5">
             <a href="https://wa.me/087808041419" target="_blank" class="unbounded-bold bg-[#B0FD07] hover:bg-[#808080] hover:text-white py-2 px-8 rounded-full">WhatsApp</a>
             <a href="mailto:yusufiskandar97@gmail.com" target="_blank" class="unbounded-bold bg-[#B0FD07] hover:bg-[#808080] hover:text-white py-2 px-8 rounded-full">Email</a>
@@ -217,52 +369,9 @@
 </div>
 
 <!-- 🔥 SCRIPT -->
-<script>
-const container = document.getElementById("scrollContainer");
-const sections = document.querySelectorAll("section");
-const navItems = document.querySelectorAll(".nav-item");
-
-navItems.forEach(item => {
-  item.addEventListener("click", function(e){
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-
-    container.scrollTo({
-      top: target.offsetTop,
-      behavior: "smooth"
-    });
-  });
-});
-
-container.addEventListener("scroll", () => {
-  let current = "";
-
-  sections.forEach(section => {
-    if (container.scrollTop >= section.offsetTop - 200) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  navItems.forEach(item => {
-    const dot = item.querySelector("div");
-    const text = item.querySelector("span");
-
-    dot.classList.remove("bg-[#B0FD07]", "scale-125");
-    dot.classList.add("bg-gray-400");
-
-    text.classList.remove("text-black", "font-medium");
-    text.classList.add("text-gray-500");
-
-    if (item.getAttribute("href") === "#" + current) {
-      dot.classList.remove("bg-gray-400");
-      dot.classList.add("bg-[#B0FD07]", "scale-125");
-
-      text.classList.remove("text-gray-500");
-      text.classList.add("text-black", "font-medium");
-    }
-  });
-});
-</script>
+<script src="scrollSection.js"></script>
+<script src="toogle_bahasa.js"></script>
+<script src="slider_portfolio.js"></script>
 
 </body>
 
